@@ -1,0 +1,134 @@
+input.username input.password {
+    height: 40px;
+}
+
+.container-fluid {
+    text-align: center;
+}
+form {
+    display: inline-block;
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+}
+
+
+.fa-1 {
+    font-size: 10em;
+    text-align: end;
+    filter: drop-shadow(4px 4px 10px rgba(255, 255, 255, 0.5));
+}
+
+.fa-2{
+    font-size: 10em;
+    text-align: end;
+    margin: -80px;
+    color: rgba(0, 0, 0, 0.532);
+    filter: drop-shadow(4px 4px 10px 0 rgba(255, 255, 255, 0.5));
+}
+.logo {
+    padding: 0 8% 0 8%;
+    width: 100%;
+}
+
+// .container-flex {
+//     width: 100% !important;
+//     display: flex;
+//     flex-grow: 3;
+// }
+
+.inner-wrap {
+justify-content: center;
+}
+
+
+.label {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-user,
+.fa-lock {
+    padding: 17px;
+    background-color: #363b41;
+    color: whitesmoke;
+    border-radius: 10px 0px 0px 10px;
+
+}
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 0 10px 10px 0px;
+    border: 1px solid gray;
+    outline: none;
+    height: 50px;
+    width: 300px;
+    padding: 12px;
+    color: #363b41;
+    font-weight: 700;
+}
+
+input[type="submit"].btn-login {
+    width: 350px;
+    height: 45px;
+    align-items: center;
+    color: #eee;
+    font-weight: 700;
+    margin-top: 30px;
+    background-color: #ea4c88;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 0;
+    outline: none;
+}
+
+.seperation {
+    margin-top: 1rem;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover {
+    background-color: #fff;
+}
+
+@media only screen and (max-width:320px) {
+
+    .outer-wrap {
+        margin: auto;
+        padding-top: 30%;
+    }
+
+    input {
+        width: 70%;
+        height: 40px;
+        border-radius: 0 10px 10px 0px;
+    }
+
+    .fa-user,
+    .fa-lock {
+        padding: 12px;
+        background-color: gray;
+        color: whitesmoke;
+    }
+    input[type="submit"]{
+        width: 70%;
+        height: 40px;
+        border-radius: 0 10px 10px 0px;
+    }
+
+}
+
+@media only screen and (max-width:850px) {
+
+
+    .logo,
+    .fa-apple {
+        display: none;
+    }
+
+
+
+}

@@ -6,22 +6,20 @@
         <div class="form-group">
           <div class="label">
             <label for="username"> <i class="fa-solid fa-user"></i></label>
-            <input class="username" placeholder="Username" id="username" type="text" formControlName="username" />
+            <input class="username" [placeholder]="labels.loginUsername" id="username" type="text" formControlName="username" />
           </div>
         </div>
         <div class="seperation"></div>
         <div class="form-group">
           <div class="label">
             <label for="password"> <i class="fa-solid fa-lock"></i></label>
-            <input class="password" placeholder="Password" id="password" type="password" formControlName="password" />
+            <input class="password" [placeholder]="labels.loginPassword" id="password" type="password" formControlName="password" />
           </div>
         </div>
-        <input (click)="login()" type="submit" class=" btn btn-login " value="Sign In">
+        <input (click)="login()" type="submit" class=" btn btn-login " [value]="labels.loginSubmit">
       </div>
     </div>
   </form>
-
-
   <!-- <div class="logo">
   <i class="fa fa-apple fa-1" ></i>
   <i class="fa fa-apple fa-2" ></i>

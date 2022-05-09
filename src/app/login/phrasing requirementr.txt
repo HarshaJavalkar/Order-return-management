@@ -1,0 +1,84 @@
+
+1. Front End application call spring microservice;
+2. Authentication using JWT
+3. JWT should be added to the authorization for each request
+4. use Interfaces in spring Classes
+5. 
+two flows 
+++++++++++
+5.1 Repair for Integral part workflow   - for integral part servicing  -default { processing: 5days, cost: 500}
+5.2 Replacement for Accessory part workflow -  -default { processing: 2days, cost: 300}
+6. process response should be displayed to the user  
+7. CompleteProcessing
+8. The complete processing detail(process request and response) should be saved in the database.
+
+
+
+
+note: Only Authorized requests can access these REST End Point  --- use route guards
+
+
+
+
+Packaging items
+
+o Integral item – INR 100
+
+o Accessory – INR 50
+
+o Protective sheath – INR 50
+
+Delivery items
+
+o Delivery charge for Integral item – INR 200
+
+o Delivery charge for Accessory – INR 100
+
+
+GET: /GetPackagingDeliveryCharge (Input: ComponentType, Count | Output:
+
+PacakagingAndDeliveryCharge)
+
+
+
+
+Security Requirements
+
+o Create JWT
+
+o Have the token expired after specific amount of time say 30 minutes
+
+o Has anonymous access to get the token detail
+
+
+
+
+# def sortChars(strs):
+#     sorted_chars=sorted(strs);
+#     a_string = "".join(sorted_chars)
+#     return a_string
+
+
+# def filteredChars(sortedChars):
+#     filteredOvals = ""
+#     for i in sortedChars:
+#         if(i == 'a' or i == 'e' or  i == 'i' or  i == 'o' or i == 'u'):
+#             filteredOvals=filteredOvals+i
+#     print(filteredOvals)
+#     return filteredOvals
+# def printWord(filtWord):
+#     count=0;
+#     for i in range(len(filtWord):
+#         if(filtWord[i])
+    
+# strs = input()
+# sortedChars= sortChars(strs)
+# filtWord=filteredChars(sortedChars);
+# printWord(filtWord)
+
+tes="123"
+print(len(tes),tes[1]);
+lorem
+
+
+

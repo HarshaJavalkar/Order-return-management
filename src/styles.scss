@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config(
+  $font-family: 'Raleway'
+);
+@include mat-core($custom-typography);
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;500&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+* {
+    font-family: 'Goldman', cursive !important;
+}
+
+i{
+    font-family: "Font Awesome 6 Free" !important;
+}

@@ -1,0 +1,37 @@
+
+
+
+1. Return order Portal should be the front-end application where a user provides the detail of the defective component for servicing. An instance of the ProcessRequest
+object should be created to fill the request detail.
+
+2. The portal should invoke the Authentication Microservice to get the JWT.
+3. On receiving the token, the web portal should invoke the ComponentProcessing
+Microservice GET action method with the ProcessRequest object. JWT should be added to the request header for authorization.
+
+4. The microservice design should have an Interface with a method declaration for Processing the service
+
+5 There should be two Classes implementing the Interface. It should contain
+
+· Repair for Integral part workflow – This workflow should cater to the
+
+logic for Integral part servicing. The default processing duration
+
+should be 5 days. Default processing charge is INR 500
+
+· Replacement for Accessory part workflow – This workflow should
+
+cater to the logic for accessory part servicing. The default processing
+
+duration should be 2 days. Default processing charge is INR 300
+
+5. The Process response should be displayed to the user.
+
+6. Upon confirmation from the user to proceed, the CompleteProcessing action method
+
+should be invoked to complete the processing. Payment processing is out of scope of
+
+this requirement.
+
+7. The complete processing detail(process request and response) should be saved in the
+
+database.

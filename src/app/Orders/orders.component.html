@@ -1,0 +1,132 @@
+<div class="container ps-5 pe-5">
+  <!-- <p class="text-danger">Note: Only accessory parts can be replaced</p> -->
+  <div class="card mt-3" *ngFor="let order of orders">
+    <div class="card-header">
+      <div class="float-start">
+        <p>Delivered to {{ order.userName }}</p>
+      </div>
+      <div class="float-end"></div>
+    </div>
+    <div class="card-body">
+      <p>Product : {{ order.componentName }}</p>
+      <p>Type : {{ order.componentType }} Item</p>
+
+      <div class="float-start">
+        <p>
+          Issue with the product ?
+          <a
+            href="#exampleModalToggle"
+            (click)="submitReturn(order)"
+            data-bs-toggle="modal"
+            *ngIf="order.componentType == 'integral'"
+          >
+            Repair
+          </a>
+          <a
+            href="#exampleModalToggle"
+            (click)="submitReturn(order)"
+            data-bs-toggle="modal"
+            *ngIf="order.componentType != 'integral'"
+          >
+            Replacement
+          </a>
+        </p>
+      </div>
+      <!-- <div class="float-end">Purchased on : {{ order.purchaseDate
+                | date:'mediumDate'}}</div> -->
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModalToggle"
+  aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel"
+  tabindex="-1"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalToggleLabel">
+          {{ selectedItem?.componentName }}
+        </h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <form action="" [formGroup]="form">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-sm-6">
+              <label for="" style="display: flex">
+                Name:
+                <input
+                  type="text"
+                  [ngClass]="editable ? 'editable' : 'non-editable'"
+                  [value]="selectedItem?.userName"
+                  formControlName="userName"
+                />
+              </label>
+            </div>
+            <div class="col-sm-6">
+              <label for="" style="display: flex">
+                Contact:
+                <input
+                  type="text"
+                  [ngClass]="editable ? 'editable' : 'non-editable'"
+                  [value]="selectedItem?.contactNumber"
+                  formControlName="contactNumber"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <h3 class="defective mt-4">Details of Defective Item</h3>
+
+            <div class="defective-container">
+              <label for="" style="display: flex">
+                Component Name:
+                {{ selectedItem?.componentName }}
+              </label>
+              <label for="" style="display: flex">
+                Component Type: {{ selectedItem?.componentType }}
+              </label>
+              <label for="" style="display: flex">
+                Quantity:
+                <input
+                  type="number"
+                  [ngClass]="editable ? 'editable' : 'non-editable'"
+                  [value]="selectedItem?.quantityOfDefective"
+                  formControlName="quantityOfDefective"
+                />
+              </label>
+            </div>
+          </div>
+          <div class="text-center">
+            <a class="editLink" *ngIf="!editable" (click)="enableEdit()">
+              Edit</a
+            >
+            <a class="editLink" *ngIf="editable" (click)="enableEdit()">
+              Save</a
+            >
+          </div>
+        </div>
+      </form>
+      <div class="modal-footer">
+        <input
+          type="submit"
+          (click)="submited()"
+          [disabled]="editable"
+          class="btn btn-login"
+          value="Proceed"
+          data-bs-dismiss="modal"
+        />
+      </div>
+    </div>
+  </div>
+</div>

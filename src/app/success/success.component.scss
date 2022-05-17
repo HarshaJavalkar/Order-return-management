@@ -1,0 +1,41 @@
+.outer-wrap{
+    display: flex;
+    flex-direction: row;
+    padding: 22px;
+    border: 1px solid  greenyellow ;
+    align-self: center;
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.24);
+
+}
+.main{
+    display: flex;
+    align-self: center;
+}
+.icon{
+    flex-shrink: 0;
+    padding: 10px;
+    padding-right: 40px;
+}
+body{
+    order: 2;
+    align-self: center;
+}
+.fa-solid.fa-calendar-check{
+    line-height: 40px;
+    font-size: 40px;
+    color: green;
+}
+.container{
+    margin-top: 3%;
+    width: 50% !important;
+}
+.success{
+    font-weight: 700;
+    font-size: 18px;
+}
+.fa-solid.fa-user-shield{
+    font-size: 80px;
+}
+.delivery{
+    margin-top: 10%;
+}

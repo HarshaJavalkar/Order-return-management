@@ -1,0 +1,26 @@
+
+<div class="container mt-5">
+    <div class="card w-50 text-center">
+      <form [formGroup]="form">
+        <h2 class="payment h3 ">Payment Details</h2>
+        <div class="outer-wrap p-4 ">
+          <div class="inner-wrap">
+            <div class="form-group">
+              <div class="input-group mb-2  text-center">
+                <span for="cardNumber" class="input-group-text"> Credit Card Number</span>
+                <input class="cardNumber form-control" id="cardNumber" type="number" formControlName="cardNumber" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group ">
+                <span for="cardLimit" class="input-group-text"> Credit CardLimit</span>
+                <input class="cardLimit form-control" id="cardLimit" type="number" formControlName="cardLimit" />
+              </div>
+            </div>
+            <input (click)="next()" type="submit" class="btn mt-3 mb-2 btn-login" value="Confirm and make payment" />
+            <input (click)="back()" type="submit" class="btn mt-2 mb-2 btn-login back" value="Back" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

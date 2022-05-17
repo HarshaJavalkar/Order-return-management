@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="h2">
+    <h1 class="h1">Delivery details</h1>
+  </div>
+
+  <div class="mt-5">
+    <div class="card w-50">
+      <div class="card-body">
+        <p>
+          <b class="title">{{ selectedItem.componentName }}</b>
+          <br />
+          {{ selectedItem.componentType }}
+          <br />
+          Quantity :{{ selectedItem.quantityOfDefective }}
+        </p>
+
+        <div class="float-end">
+          Expected to be delivered on
+          <b> {{ processingDetails?.dateOfDelivery }}</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mt-5 container w-50">
+  <b class="head-1">PRICE DETAILS</b>
+
+  <table class="table mt-3">
+    <tbody>
+      <tr>
+        <td>Processing charges</td>
+        <td>{{ processingDetails?.processingCharge }}</td>
+      </tr>
+      <tr>
+        <td>Packaging and delivery Charges</td>
+        <td>{{ processingDetails?.packagingAndDeliveryCharge }}</td>
+      </tr>
+
+      <tr>
+        <th scope="row">Total Charge</th>
+        <th>{{total}}</th>
+      </tr>
+    </tbody>
+  </table>
+
+  <button (click)="next()" class="btn  w-100"> Next</button>
+  <button (click)="cancel()" class="btn cancel w-100"> Cancel</button>
+
+</div>

@@ -3,11 +3,20 @@ $custom-typography: mat-typography-config(
   $font-family: 'Raleway'
 );
 @include mat-core($custom-typography);
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;500&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;500&family=Oleo+Script+Swash+Caps:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+@import url(https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap);
+
+// @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 * {
-    font-family: 'Goldman', cursive !important;
+   // font-family: "Fredoka One", cursive;
+
+    // font-family: 'Goldman', cursive !important;
+    font-family: 'Varela Round', sans-serif;
 }
 
-i{
+i {
     font-family: "Font Awesome 6 Free" !important;
 }

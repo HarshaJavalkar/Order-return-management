@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+* {
+  font-family: "Varela Round", sans-serif;
+}
+
+input[type="submit"].btn-login {
+//   width: 350px;
+//   height: 45px;
+  align-items: center;
+  color: #eee;
+  font-weight: 700;
+  background-color: #ea4c88;
+  padding: 6px;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 0;
+  outline: none;
+}
+.non-editable{
+  outline: none;
+  pointer-events: none;
+  border: none;
+}
+
+.card{
+  box-shadow: 4px 2px 3px 3px rgba(0, 225, 255, 0.158);
+
+}
+.editLink{
+  cursor: pointer;
+}
+
+.defective{
+  font-weight: 700;
+}

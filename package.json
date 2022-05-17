@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,8 +20,11 @@
     "@angular/platform-browser": "~13.1.0",
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
+    "@auth0/angular-jwt": "^5.0.2",
+    "@rxjs/rx": "^4.1.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
+    "url-polyfill": "^1.1.12",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {

@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CredentialsService } from '../credentials.service';
+import Constants from '../data/constants';
 import { LabelsService } from '../labels.service';
 
 @Component({
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
   form: any;
   labels: any;
   subscription: any;
+  isInv = false;
 
+  variable= 'text'
   constructor(
     private elementRef: ElementRef,
     private cs: CredentialsService,
@@ -25,13 +28,11 @@ export class LoginComponent implements OnInit {
 
   ngAfterViewInit() {
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor =
-      '#2c3338';
+      '#E9F2F9';
   }
   ngOnInit(): void {
-    this.cs.getUsers().subscribe((data: any) => {
-      console.log(data);
-    });
-
+    this.variable = "password"
+    sessionStorage.clear();
     this.form = new FormGroup({
       username: new FormControl('', [
         Validators.required,
@@ -40,24 +41,27 @@ export class LoginComponent implements OnInit {
       password: new FormControl('', [
         Validators.required,
         Validators.minLength(3),
-      ]),
+      ]), 
     });
   }
 
   login() {
-    this.subscription = this.cs.validateCred(this.form.value).subscribe(
+    this.subscription = this.cs.jwTAuth(this.form.value).subscribe(
       (data: any) => this.handleSuccessResponse(data),
       (error: any) => this.handleErrorResponse(error)
     );
   }
 
   handleSuccessResponse(res: any) {
-    if (res.message == 'success') {
-      this.router.navigateByUrl('/home');
+    console.log(res);
+    if(res.status==200){
+      this.router.navigate(['orders']);
     }
-  }
 
+  }
   handleErrorResponse(error: any) {
-    alert(error.error.message);
+    if (Constants.INV_CRED) {
+      this.isInv = true;
+    }
   }
 }

@@ -1,5 +1,8 @@
 {
     "loginUsername": "Username",
     "loginPassword": "Password",
-    "loginSubmit": "Sign In"
+    "loginSubmit": "Sign In",
+    "invalidCred": "Invalid Credentials",
+    "DE-100":"We are sorry. Your payment could not be processed due to insufficient limit.",
+    "DE-200":"Your Payment is successful. Thank you for using our service"
 }
